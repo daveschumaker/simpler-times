@@ -1,0 +1,19 @@
+{
+  "name": "simpler-times",
+  "version": "0.1.0",
+  "description": "A small utility to display relative dates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/.bin/mocha",
+    "watch": "npm test -- --watch"
+  },
+  "keywords": [
+    "time"
+  ],
+  "author": "Dave Schumaker <dave@dave.ly> (https://dave.ly)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.1"
+  }
+}
