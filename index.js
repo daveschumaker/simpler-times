@@ -5,7 +5,7 @@
 * @return {String}
 */
 
-// Times in milliseconds:
+// Relative time in milliseconds:
 var SECOND = 1000;
 var MINUTE = 60 * SECOND;
 var HOUR = 60 * MINUTE;
@@ -23,27 +23,26 @@ module.exports = function(timestamp) {
     var timeDiff = new Date().getTime() - timestamp;
     var timeInteger;
     var timeUnit;
-    var timeString = '';
 
     if (timeDiff < MINUTE) {
         return 'just now';
     } else if (timeDiff < HOUR) {
-        timeInteger = parseInt(timeDiff / MINUTE);
+        timeInteger = Math.round(timeDiff / MINUTE);
         timeUnit = 'minute';
     } else if (timeDiff < DAY) {
-        timeInteger = parseInt(timeDiff / HOUR);
+        timeInteger = Math.round(timeDiff / HOUR);
         timeUnit = 'hour';
     } else if (timeDiff < WEEK) {
-        timeInteger = parseInt(timeDiff / DAY);
+        timeInteger = Math.round(timeDiff / DAY);
         timeUnit = 'day';
     } else if (timeDiff < MONTH) {
-        timeInteger = parseInt(timeDiff / WEEK);
+        timeInteger = Math.round(timeDiff / WEEK);
         timeUnit = 'week';
     } else if (timeDiff < YEAR) {
-        timeInteger = parseInt(timeDiff / MONTH);
+        timeInteger = Math.round(timeDiff / MONTH);
         timeUnit = 'month';
     } else {
-        timeInteger = parseInt(timeDiff / YEAR);
+        timeInteger = Math.round(timeDiff / YEAR);
         timeUnit = 'year';
     }
 

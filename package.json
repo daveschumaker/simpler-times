@@ -1,6 +1,6 @@
 {
   "name": "simpler-times",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small utility to display relative dates.",
   "main": "index.js",
   "scripts": {

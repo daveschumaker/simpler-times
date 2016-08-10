@@ -44,16 +44,24 @@ describe('simplertimes', function() {
     var eightHundredSecondsAgo = 800 * SECOND;
     var testTimestamp2 = Date.now() - eightHundredSecondsAgo;
     simplertimes(testTimestamp2).should.equal('13 minutes ago');
+
+    var thirtyMinutesAgo = 30 * MINUTE;
+    var testTimestamp3 = Date.now() - thirtyMinutesAgo;
+    simplertimes(testTimestamp3).should.equal('30 minutes ago');
   });
 
   it('show correct hours', function() {
-    var ninetyMinutesAgo = 90 * MINUTE;
+    var ninetyMinutesAgo = 89 * MINUTE;
     var testTimestamp = Date.now() - ninetyMinutesAgo;
     simplertimes(testTimestamp).should.equal('1 hour ago');
 
+    var ninetyOneMinutesAgo = 90 * MINUTE;
+    var testTimestamp2 = Date.now() - ninetyOneMinutesAgo;
+    simplertimes(testTimestamp2).should.equal('2 hours ago');
+
     var fiveHoursAgo = 5 * HOUR;
-    var testTimestamp2 = Date.now() - fiveHoursAgo;
-    simplertimes(testTimestamp2).should.equal('5 hours ago');
+    var testTimestamp3 = Date.now() - fiveHoursAgo;
+    simplertimes(testTimestamp3).should.equal('5 hours ago');
   });
 
   it('show correct days', function() {
