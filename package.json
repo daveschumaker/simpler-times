@@ -12,7 +12,11 @@
     "url" : "https://github.com/daveschumaker/simpler-times.git"
   },
   "keywords": [
-    "time"
+    "date",
+    "format date",
+    "relative time",
+    "time",
+    "timestamp"
   ],
   "author": "Dave Schumaker <dave@dave.ly> (https://dave.ly)",
   "license": "MIT",
